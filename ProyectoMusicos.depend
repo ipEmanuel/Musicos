@@ -1,0 +1,188 @@
+# depslib dependency file v1.0
+1683981383 source:c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\main.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	<iomanip>
+	"Fecha.h"
+	"Persona.h"
+	"Musicos.h"
+	"ArchivoMusicos.h"
+	"Generos.h"
+	"ArchivoGeneros.h"
+	"Reportes.h"
+	"Musicos2023.h"
+	"funcionesGlobales.h"
+
+1683299424 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\clsfecha.h
+
+1683297156 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\clspersona.h
+
+1683482280 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\clsmusicos.h
+
+1683488313 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\clsarchivomusicos.h
+
+1683979349 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\fecha.h
+
+1683977726 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\persona.h
+
+1683980970 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\musicos.h
+
+1683496198 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\archivomusicos.h
+
+1683682693 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\generos.h
+
+1684008487 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\funcionesglobales.h
+
+1683684298 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\archivogeneros.h
+
+1683981320 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\reportes.h
+
+1684007938 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos\musicos2023.h
+
+1684417331 source:c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\main.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	<iomanip>
+	"Fecha.h"
+	"Persona.h"
+	"Musicos.h"
+	"ArchivoMusicos.h"
+	"Generos.h"
+	"ArchivoGeneros.h"
+	"Reportes.h"
+	"Musicos2023.h"
+	"Instrumentos.h"
+	"funcionesGlobales.h"
+
+1683979349 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\fecha.h
+
+1684413432 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\persona.h
+
+1684413021 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\musicos.h
+
+1683496198 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\archivomusicos.h
+
+1683682693 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\generos.h
+
+1683684298 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\archivogeneros.h
+
+1684417266 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\reportes.h
+
+1684007938 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\musicos2023.h
+
+1684417385 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\funcionesglobales.h
+
+1684416505 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyectomusicos - bkp13052023\instrumentos.h
+
+1684417331 source:c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\main.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	<iomanip>
+	"Fecha.h"
+	"Persona.h"
+	"Musicos.h"
+	"ArchivoMusicos.h"
+	"Generos.h"
+	"ArchivoGeneros.h"
+	"Reportes.h"
+	"Musicos2023.h"
+	"Instrumentos.h"
+	"funcionesGlobales.h"
+
+1683979349 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\fecha.h
+
+1684413432 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\persona.h
+
+1684413021 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\musicos.h
+
+1683496198 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\archivomusicos.h
+
+1683682693 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\generos.h
+
+1683684298 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\archivogeneros.h
+
+1684417912 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\reportes.h
+
+1684007938 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\musicos2023.h
+
+1684418033 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\instrumentos.h
+
+1684417385 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\infante_pablo\funcionesglobales.h
+
+1685913147 source:c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\main.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	<iomanip>
+	<fstream>
+	"Fecha.h"
+	"Persona.h"
+	"Musicos.h"
+	"ArchivoMusicos.h"
+	"Generos.h"
+	"ArchivoGeneros.h"
+	"Musicos2023.h"
+	"Instrumentos.h"
+	"Reportes.h"
+	"SubMenus.h"
+
+1683979349 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\fecha.h
+
+1684413432 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\persona.h
+
+1684413021 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\musicos.h
+
+1683496198 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\archivomusicos.h
+
+1683682693 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\generos.h
+
+1683684298 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\archivogeneros.h
+
+1685913214 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\reportes.h
+
+1685717962 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\musicos2023.h
+
+1685913147 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\instrumentos.h
+
+1685818171 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\funcionesglobales.h
+
+1685913329 c:\users\administrador\documents\documentos\utn 2023\laboratorio 2\proyecto entregado en el parcial\infante_pablo\submenus.h
+
+1685913147 source:c:\users\administrador\documents\documentos\c++ git\main.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	<iomanip>
+	<fstream>
+	"Fecha.h"
+	"Persona.h"
+	"Musicos.h"
+	"ArchivoMusicos.h"
+	"Generos.h"
+	"ArchivoGeneros.h"
+	"Musicos2023.h"
+	"Instrumentos.h"
+	"Reportes.h"
+	"SubMenus.h"
+
+1683979349 c:\users\administrador\documents\documentos\c++ git\fecha.h
+
+1684413432 c:\users\administrador\documents\documentos\c++ git\persona.h
+
+1684413021 c:\users\administrador\documents\documentos\c++ git\musicos.h
+
+1683496198 c:\users\administrador\documents\documentos\c++ git\archivomusicos.h
+
+1683682693 c:\users\administrador\documents\documentos\c++ git\generos.h
+
+1683684298 c:\users\administrador\documents\documentos\c++ git\archivogeneros.h
+
+1685913147 c:\users\administrador\documents\documentos\c++ git\instrumentos.h
+
+1685919628 c:\users\administrador\documents\documentos\c++ git\reportes.h
+
+1685919203 c:\users\administrador\documents\documentos\c++ git\submenus.h
+
