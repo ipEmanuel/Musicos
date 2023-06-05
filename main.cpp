@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstring>
-//#include <ctime>
+#include <ctime>
 #include <iomanip>
 #include <fstream>
 using namespace std;
@@ -11,6 +11,7 @@ using namespace std;
 #include "Generos.h"
 #include "ArchivoGeneros.h"
 #include "Instrumentos.h"
+#include "ArchivoInstrumentos.h"
 #include "Reportes.h"
 #include "SubMenus.h"
 
@@ -34,8 +35,9 @@ int main()
         cout<<"------------------------"<<endl;
         cout<<"1 - MENU MUSICOS"<<endl;
         cout<<"2 - MENU GENEROS"<<endl;
-        cout<<"3 - REPORTES"<<endl;
-        cout<<"4 - CONFIGURACION"<<endl;
+        cout<<"3 - MENU INSTRUMENTOS"<<endl;
+        cout<<"4 - REPORTES"<<endl;
+        cout<<"5 - CONFIGURACION"<<endl;
         cout<<"0 - SALIR DEL PROGRAMA"<<endl;
         cout<<"------------------------"<<endl;
         cout<<"INGRESE UNA OPCION: ";
@@ -46,9 +48,11 @@ int main()
             break;
             case 2: menuGeneros();
             break;
-            case 3: menuReportes();
+            case 3: menuInstrumentos();
             break;
-            case 4: menuConfiguracion();
+            case 4: menuReportes();
+            break;
+            case 5: menuConfiguracion();
             break;
             case 0:
                 return 0;

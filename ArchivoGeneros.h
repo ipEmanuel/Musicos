@@ -60,21 +60,31 @@ void ArchivoGeneros::agregarRegistro(){
 //////////////////////////////////////////////////////////
 int ArchivoGeneros::ultimoID(){
     Generos obj;
-    int uID=0;
+    int ultimoID = 0; // VARIABLE PARA ALMACENAR EL ÚLTIMO ID
     FILE *pGen;
     pGen=fopen(nombre, "rb");
-    if(pGen==NULL){// VERIFICA QUE LO PUEDA ABRIR SI NO ENVIA UN CODIGO DE ERROR
+    if(pGen==NULL){
         return -2;
     }
-
-    while(fread(&obj, sizeof obj, 1, pGen)==1){//MIENTRAS ALLA ARCHIVOS LO RECORRE
-        uID=obj.getId();
-	}
-	fclose(pGen);
-	uID++;
-	return uID;
+    // POSICIONAR EL PUNTERO AL FINAL DEL ARCHIVO
+    fseek(pGen, 0, SEEK_END);
+    // OBTENIENE LA POSICIÓN ACTUAL DEL PUNTERO
+    long fileSize = ftell(pGen);
+    // VERIFICAR SI EL TAMAÑO DEL ARCHIVO ES MAYOR O IGUAL AL TAMAÑO DE UN REGISTRO DE Generos
+    if (fileSize >= sizeof(Generos)) {
+        // RETROCEDER EL PUNTERO EN EL TAMAÑO DE UN REGISTRO DE Generos DESDE EL FINAL DEL ARCHIVO
+        fseek(pGen, -sizeof(Generos), SEEK_END);
+        // LEE EL ÚLTIMO REGISTRO DE Generos DEL ARCHIVO
+        fread(&obj, sizeof(Generos), 1, pGen);
+        // OBTENIENE EL ID DEL ÚLTIMO REGISTRO
+        ultimoID = obj.getId();
+    }
+    fclose(pGen);
+    // RETORNAR EL ÚLTIMO ID INCREMENTADO EN 1 PARA EL NUEVO REGISTRO
+    return ultimoID + 1;
 }
-//////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
 //////////////FUNCIONES PARA BUSCAR POR ID////////////////
 //////////////////////////////////////////////////////////
 Generos ArchivoGeneros::leerGeneros(int p){
@@ -142,8 +152,10 @@ void ArchivoGeneros::mostrarRegistros(){
     }
 
 	while(fread(&obj, sizeof obj, 1, pGen)==1){
-        obj.Mostrar();
-        if(obj.getEstado()) cout<<endl;
+        if(obj.getEstado()){
+            obj.Mostrar();
+            cout<<endl;
+        }
 	}
 	fclose(pGen);
 }

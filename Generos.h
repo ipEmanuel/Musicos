@@ -60,10 +60,10 @@ void Generos:: Cargar(int anioOrigen, int id){
     _id=id;
     _anioOrigen=anioOrigen;
 
-    cout<<"INGRESAR NOMBRE";
+    cout<<"INGRESAR NOMBRE: ";
     cin>>_nombre;
 
-    cout<<"INGRESAR PAIS DE ORIGEN ";
+    cout<<"INGRESAR PAIS DE ORIGEN: ";
     cin>>paisOrigen;
     if(paisOrigen>0 && paisOrigen<=100){
         _paisOrigen=paisOrigen;

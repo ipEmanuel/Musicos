@@ -4,28 +4,40 @@
 
 class Instrumentos {
 private:
-    int _dni;
-    int _tipoMusica;
+    int _id;
     char _nombre[30];
-    char _apellido[30];
+    int _clasificacion;
+    bool _estado;
 
 public:
-    int getDNI() const { return _dni; }
+    int getId() const { return _id; }
     const char* getNombre() const { return _nombre; }
-    const char* getApellido() const { return _apellido; }
-    int getTipoDeMusica() const { return _tipoMusica; }
+    int getClasificacion() const {return _clasificacion;}
+    bool getEstado() const { return _estado; }
 
-    void setDNI(int d) { _dni = d; }
-    void setNombre(const char* n) { strncpy(_nombre, n, sizeof(_nombre)); _nombre[sizeof(_nombre) - 1] = '\0'; }
-    void setApellido(const char* a) { strncpy(_apellido, a, sizeof(_apellido)); _apellido[sizeof(_apellido) - 1] = '\0'; }
-    void setTipoDeMusica(int tipoDeMusica) { _tipoMusica = tipoDeMusica; }
+    void setId(int id) { _id = id; }
+    void setNombre(const char *nombre){strcpy(_nombre,nombre);}
+    void setClasificacion(int clasificacion) { _clasificacion = clasificacion; }
+    void setEstado(bool estado) { _estado = estado; }
+
+    void cargar(int id){
+        _id=id;
+        cout<<"CARGA DE INSTRUMENTOS"<<endl;
+        cout<<"---------------------"<<endl;
+        cout<<"INGRESAR NOMBRE: ";
+        cin>>_nombre;
+        cout<<"INGRESAR CLASIFICACION: ";
+        cin>>_clasificacion;
+        _estado=true;
+    }
 
     void mostrar(){
-        cout << "DNI: " << _dni<< endl;
-        cout << "NOMBRE: " << _nombre<< endl;
-        cout << "APELLIDO: " << _apellido<< endl;
-        cout << "TIPO DE MUSICA: " << _tipoMusica<< endl;
-        cout << "-----------------------" << endl;
+        if(_estado){
+            cout << "ID: " << _id<< endl;
+            cout << "NOMBRE: " << _nombre<< endl;
+            cout << "CLASIFICACION: " << _clasificacion<< endl;
+            cout << "-----------------------" << endl;
+        }
     }
 
 };

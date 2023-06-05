@@ -186,3 +186,40 @@
 
 1685919203 c:\users\administrador\documents\documentos\c++ git\submenus.h
 
+1685980355 source:c:\users\administrador\documents\documentos\c++ git\musicos\main.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	<iomanip>
+	<fstream>
+	"Fecha.h"
+	"Persona.h"
+	"Musicos.h"
+	"ArchivoMusicos.h"
+	"Generos.h"
+	"ArchivoGeneros.h"
+	"Instrumentos.h"
+	"ArchivoInstrumentos.h"
+	"Reportes.h"
+	"SubMenus.h"
+
+1683979349 c:\users\administrador\documents\documentos\c++ git\musicos\fecha.h
+
+1684413432 c:\users\administrador\documents\documentos\c++ git\musicos\persona.h
+
+1684413021 c:\users\administrador\documents\documentos\c++ git\musicos\musicos.h
+
+1683496198 c:\users\administrador\documents\documentos\c++ git\musicos\archivomusicos.h
+
+1685973340 c:\users\administrador\documents\documentos\c++ git\musicos\generos.h
+
+1685980110 c:\users\administrador\documents\documentos\c++ git\musicos\archivogeneros.h
+
+1685980553 c:\users\administrador\documents\documentos\c++ git\musicos\instrumentos.h
+
+1685967077 c:\users\administrador\documents\documentos\c++ git\musicos\reportes.h
+
+1685985726 c:\users\administrador\documents\documentos\c++ git\musicos\submenus.h
+
+1685985726 c:\users\administrador\documents\documentos\c++ git\musicos\archivoinstrumentos.h
+

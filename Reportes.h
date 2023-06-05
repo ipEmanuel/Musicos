@@ -9,7 +9,6 @@ class Reportes{
         void restaurarMusicos();
         void restaurarGeneros();
         void establecerDatosInicio();
-
 };
 
 //////METODOS PARA EL MENU REPORTES//////
