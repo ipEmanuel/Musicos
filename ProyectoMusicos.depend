@@ -186,7 +186,7 @@
 
 1685919203 c:\users\administrador\documents\documentos\c++ git\submenus.h
 
-1685980355 source:c:\users\administrador\documents\documentos\c++ git\musicos\main.cpp
+1686016037 source:c:\users\administrador\documents\documentos\c++ git\musicos\main.cpp
 	<iostream>
 	<cstring>
 	<ctime>
@@ -200,6 +200,8 @@
 	"ArchivoGeneros.h"
 	"Instrumentos.h"
 	"ArchivoInstrumentos.h"
+	"Paises.h"
+	"ArchivoPaises.h"
 	"Reportes.h"
 	"SubMenus.h"
 
@@ -219,7 +221,11 @@
 
 1685967077 c:\users\administrador\documents\documentos\c++ git\musicos\reportes.h
 
-1685985726 c:\users\administrador\documents\documentos\c++ git\musicos\submenus.h
+1686014639 c:\users\administrador\documents\documentos\c++ git\musicos\submenus.h
 
-1685985726 c:\users\administrador\documents\documentos\c++ git\musicos\archivoinstrumentos.h
+1686015751 c:\users\administrador\documents\documentos\c++ git\musicos\archivoinstrumentos.h
+
+1686015006 c:\users\administrador\documents\documentos\c++ git\musicos\paises.h
+
+1686015964 c:\users\administrador\documents\documentos\c++ git\musicos\archivopaises.h
 

@@ -12,6 +12,8 @@ using namespace std;
 #include "ArchivoGeneros.h"
 #include "Instrumentos.h"
 #include "ArchivoInstrumentos.h"
+#include "Paises.h"
+#include "ArchivoPaises.h"
 #include "Reportes.h"
 #include "SubMenus.h"
 
@@ -36,8 +38,9 @@ int main()
         cout<<"1 - MENU MUSICOS"<<endl;
         cout<<"2 - MENU GENEROS"<<endl;
         cout<<"3 - MENU INSTRUMENTOS"<<endl;
-        cout<<"4 - REPORTES"<<endl;
-        cout<<"5 - CONFIGURACION"<<endl;
+        cout<<"4 - MENU PAISES"<<endl;
+        cout<<"5 - REPORTES"<<endl;
+        cout<<"6 - CONFIGURACION"<<endl;
         cout<<"0 - SALIR DEL PROGRAMA"<<endl;
         cout<<"------------------------"<<endl;
         cout<<"INGRESE UNA OPCION: ";
@@ -50,9 +53,11 @@ int main()
             break;
             case 3: menuInstrumentos();
             break;
-            case 4: menuReportes();
+            case 4: menuPaises();
             break;
-            case 5: menuConfiguracion();
+            case 5: menuReportes();
+            break;
+            case 6: menuConfiguracion();
             break;
             case 0:
                 return 0;

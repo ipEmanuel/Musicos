@@ -35,12 +35,14 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="ArchivoGeneros.h" />
+		<Unit filename="ArchivoInstrumentos.h" />
 		<Unit filename="ArchivoMusicos.h" />
-		<Unit filename="ArchivoReportes.h" />
+		<Unit filename="ArchivoPaises.h" />
 		<Unit filename="Fecha.h" />
 		<Unit filename="Generos.h" />
 		<Unit filename="Instrumentos.h" />
 		<Unit filename="Musicos.h" />
+		<Unit filename="Paises.h" />
 		<Unit filename="Persona.h" />
 		<Unit filename="Reportes.h" />
 		<Unit filename="SubMenus.h" />

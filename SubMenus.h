@@ -7,6 +7,7 @@
 const char *ARCHIVO_MUSICOS="musicos.dat";
 const char *ARCHIVO_GENEROS="generos.dat";
 const char *ARCHIVO_INSTRUMENTOS="instrumentos.dat";
+const char *ARCHIVO_PAISES="paises.dat";
 void menuMusicos(){
 
 ArchivoMusicos objMusicos(ARCHIVO_MUSICOS);
@@ -131,6 +132,51 @@ void menuInstrumentos(){
             break;
             case 5:if(objInstrumentos.bajaLogica()){
                         cout<<"INSTRUMENTO DADO DE BAJA CORRECTAMENTE"<<endl;
+                    }else{
+                        cout<<"NO SE PUDO REALIZAR LA BAJA"<<endl;
+                    }
+            break;
+            case 0:
+                return;
+            break;
+        }
+        cout<<endl;
+        system("pause");
+    }
+}
+void menuPaises(){
+
+    ArchivoPaises objPaises(ARCHIVO_PAISES);
+    int opc;
+    while(true){
+        system("cls");
+        cout<<"MENU PAISES"<<endl;
+        cout<<"------------------------"<<endl;
+        cout<<"1 - AGREGAR PAIS"<<endl;
+        cout<<"2 - LISTAR PAIS POR ID"<<endl;
+        cout<<"3 - LISTAR TODO"<<endl;
+        cout<<"4 - MODIFICAR NOMBRE"<<endl;
+        cout<<"5 - ELIMINAR REGISTRO"<<endl;
+        cout<<"0 - VOLVER AL MENU PRINCIPAL"<<endl;
+        cout<<"------------------------"<<endl;
+        cout<<"INGRESE UNA OPCION: ";
+        cin>>opc;
+        system("cls");
+        switch(opc){
+            case 1: objPaises.agregarRegistro();
+            break;
+            case 2:objPaises.buscarPorID();
+            break;
+            case 3:objPaises.mostrarRegistros();
+            break;
+            case 4:if(objPaises.modificarNombre()){
+                        cout<<"NOMBRE MODIFICADO CORRECTAMENTE"<<endl;
+                    }else{
+                        cout<<"NO SE PUDO REALIZAR LA MODIFICACION"<<endl;
+                    }
+            break;
+            case 5:if(objPaises.bajaLogica()){
+                        cout<<"PAIS DADO DE BAJA CORRECTAMENTE"<<endl;
                     }else{
                         cout<<"NO SE PUDO REALIZAR LA BAJA"<<endl;
                     }
