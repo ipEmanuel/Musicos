@@ -186,7 +186,7 @@
 
 1685919203 c:\users\administrador\documents\documentos\c++ git\submenus.h
 
-1686016037 source:c:\users\administrador\documents\documentos\c++ git\musicos\main.cpp
+1686146209 source:c:\users\administrador\documents\documentos\c++ git\musicos\main.cpp
 	<iostream>
 	<cstring>
 	<ctime>
@@ -194,38 +194,38 @@
 	<fstream>
 	"Fecha.h"
 	"Persona.h"
-	"Musicos.h"
-	"ArchivoMusicos.h"
-	"Generos.h"
-	"ArchivoGeneros.h"
 	"Instrumentos.h"
 	"ArchivoInstrumentos.h"
+	"Musicos.h"
+	"ArchivoMusicos.h"
 	"Paises.h"
 	"ArchivoPaises.h"
+	"Generos.h"
+	"ArchivoGeneros.h"
 	"Reportes.h"
 	"SubMenus.h"
 
 1683979349 c:\users\administrador\documents\documentos\c++ git\musicos\fecha.h
 
-1684413432 c:\users\administrador\documents\documentos\c++ git\musicos\persona.h
+1686190696 c:\users\administrador\documents\documentos\c++ git\musicos\persona.h
 
-1684413021 c:\users\administrador\documents\documentos\c++ git\musicos\musicos.h
+1686190750 c:\users\administrador\documents\documentos\c++ git\musicos\musicos.h
 
-1683496198 c:\users\administrador\documents\documentos\c++ git\musicos\archivomusicos.h
+1686191881 c:\users\administrador\documents\documentos\c++ git\musicos\archivomusicos.h
 
-1685973340 c:\users\administrador\documents\documentos\c++ git\musicos\generos.h
+1686189406 c:\users\administrador\documents\documentos\c++ git\musicos\generos.h
 
-1685980110 c:\users\administrador\documents\documentos\c++ git\musicos\archivogeneros.h
+1686189537 c:\users\administrador\documents\documentos\c++ git\musicos\archivogeneros.h
 
-1685980553 c:\users\administrador\documents\documentos\c++ git\musicos\instrumentos.h
+1686190380 c:\users\administrador\documents\documentos\c++ git\musicos\instrumentos.h
 
-1685967077 c:\users\administrador\documents\documentos\c++ git\musicos\reportes.h
+1686063090 c:\users\administrador\documents\documentos\c++ git\musicos\reportes.h
 
 1686014639 c:\users\administrador\documents\documentos\c++ git\musicos\submenus.h
 
-1686015751 c:\users\administrador\documents\documentos\c++ git\musicos\archivoinstrumentos.h
+1686188165 c:\users\administrador\documents\documentos\c++ git\musicos\archivoinstrumentos.h
 
-1686015006 c:\users\administrador\documents\documentos\c++ git\musicos\paises.h
+1686189537 c:\users\administrador\documents\documentos\c++ git\musicos\paises.h
 
-1686015964 c:\users\administrador\documents\documentos\c++ git\musicos\archivopaises.h
+1686186589 c:\users\administrador\documents\documentos\c++ git\musicos\archivopaises.h
 

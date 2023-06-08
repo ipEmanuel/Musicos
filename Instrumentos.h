@@ -26,6 +26,11 @@ public:
         cout<<"---------------------"<<endl;
         cout<<"INGRESAR NOMBRE: ";
         cin>>_nombre;
+         // Convertir _nombre a mayúsculas
+        int length = std::strlen(_nombre);
+        for (int i = 0; i < length; i++) {
+            _nombre[i] = std::toupper(_nombre[i]);
+        }
         cout<<"INGRESAR CLASIFICACION: ";
         cin>>_clasificacion;
         _estado=true;

@@ -26,11 +26,9 @@ class Musicos: public Persona{
         void setFechaIngreso(Fecha fechaInscripcion){_fechaInscripcion = fechaInscripcion;}
         void setMatricula(float matricula){_matricula = matricula;}
 
-        void Cargar(int dni=-1){
+        void Cargar(int dni=-1, int Instrumentos=-1){
                 cout<<"INGRESAR CLAUSTRO (1-Docente; 2-Alumno; 3-No Docente; 4-Graduado): ";
                 cin>>_claustro;
-                cout<<"INGRESAR INSTRUMENTO (ENTRE 1 y 15): ";
-                cin>>_instrumento;
                 cout<<"INGRESAR TIPO DE MUSICA (ENTRE 1 y 10): ";
                 cin>>_tipoDeMusica;
                 cout<<"INGRESAR FECHA DE INSCRIPCION: "<<endl;
@@ -45,14 +43,15 @@ class Musicos: public Persona{
 
         void Mostrar(){
             if(estado){
-                cout<<"CLAUSTRO "<<_claustro<<endl;
-                cout<<"INSTRUMENTO "<<_instrumento<<endl;
-                cout<<"TIPO DE MUSICA "<<_tipoDeMusica<<endl;
-                cout<<"MATRICULA "<<_matricula<<endl;
-                cout<<"FECHA DE INSCRIPCION "<<endl;
-                cout<<"------------------------------"<<endl;
+                //cout<<"------------------------------"<<endl;
+                cout<<"CLAUSTRO: "<<_claustro<<endl;
+                cout<<"INSTRUMENTO: "<<_instrumento<<endl;
+                cout<<"TIPO DE MUSICA: "<<_tipoDeMusica<<endl;
+                cout<<"MATRICULA: "<<_matricula<<endl;
+                cout<<"FECHA DE INSCRIPCION: ";
                 _fechaInscripcion.Mostrar();
                 Persona::Mostrar();
+                cout<<"------------------------------";
             }
         }
 };

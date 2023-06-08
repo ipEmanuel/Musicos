@@ -12,7 +12,8 @@ class ArchivoPaises{
 
         ///ALTA
         void agregarRegistro();
-
+        //CONTAR REGISTROS
+        int contarRegistro();
         ///ID
         int ultimoID();
         Paises leerPaises(int p);
@@ -28,6 +29,20 @@ class ArchivoPaises{
         //BAJA
         bool bajaLogica();
 };
+//////////////////////////////////////////////////////////
+/////////////////CUENTA LOS REGISTROS/////////////////////
+//////////////////////////////////////////////////////////
+int ArchivoPaises::contarRegistro(){
+        FILE *p;
+        p=fopen(nombre, "rb");
+        if(p==NULL) return -1;
+        fseek(p, 0,2);
+        int tam=ftell(p);
+        fclose(p);
+        return tam/sizeof(Paises);
+}
+
+
 //////////////////////////////////////////////////////////
 ///////////////////CARGA EL ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
@@ -112,6 +127,8 @@ int ArchivoPaises::buscarID(int id){
 void ArchivoPaises::buscarPorID(){
     Paises obj;
     int ID;
+    cout<<"LISTAR PAISES POR ID"<<endl;
+    cout<<"--------------------"<<endl;
     cout<<"INGRESE EL ID A BUSCAR ";
     cin>>ID;
     int pos=buscarID(ID);
@@ -135,7 +152,8 @@ void ArchivoPaises::mostrarRegistros(){
         cout<<"NO SE PUDO CREAR EL ARCHIVO"<<endl;
         return;
     }
-
+    cout<<"PAISES CARGADOS"<<endl;
+    cout<<"----------------"<<endl;
 	while(fread(&obj, sizeof obj, 1, pPais)==1){
         if(obj.getEstado()){
             obj.mostrar();

@@ -6,14 +6,14 @@
 using namespace std;
 #include "Fecha.h"
 #include "Persona.h"
-#include "Musicos.h"
-#include "ArchivoMusicos.h"
-#include "Generos.h"
-#include "ArchivoGeneros.h"
 #include "Instrumentos.h"
 #include "ArchivoInstrumentos.h"
+#include "Musicos.h"
+#include "ArchivoMusicos.h"
 #include "Paises.h"
 #include "ArchivoPaises.h"
+#include "Generos.h"
+#include "ArchivoGeneros.h"
 #include "Reportes.h"
 #include "SubMenus.h"
 

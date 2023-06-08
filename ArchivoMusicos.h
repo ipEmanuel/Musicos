@@ -30,6 +30,22 @@ class ArchivoMusicos{
 
 };
 //////////////////////////////////////////////////////////
+///////////FUNCION QUE BUSCA UN INSTRUMENTOS//////////////
+//////////////////////////////////////////////////////////
+bool buscarInstrumento(int instrumento){
+    Instrumentos reg;
+    ArchivoInstrumentos archivoInstrumentos("instrumentos.dat");
+    int cantReg = archivoInstrumentos.contarRegistro();
+
+    for (int i = 0; i < cantReg; i++) {
+        reg = archivoInstrumentos.leerInstrumentos(i);
+        if (reg.getId() == instrumento) {
+            return true;
+        }
+    }
+    return false;
+}
+//////////////////////////////////////////////////////////
 ///////////////////CARGA EL ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
 void ArchivoMusicos::agregarRegistro(){
@@ -45,11 +61,23 @@ void ArchivoMusicos::agregarRegistro(){
     cin>>dni;
     if(buscarMusico(dni)>0){
         cout<<"ESE DNI YA EXISTE EN EL ARCHIVO"<<endl;
+        fclose(pMusi);
         return;
     }
-    obj.Cargar(dni);
-	fwrite(&obj, sizeof (Musicos), 1, pMusi);
-	fclose(pMusi);
+
+    int instrumento;
+    cout<<"INGRESAR INSTRUMENTO (ENTRE 1 y 15): ";
+    cin>>instrumento;
+    if(buscarInstrumento(instrumento) == true){
+        obj.Cargar(dni, instrumento);
+        fwrite(&obj, sizeof (Musicos), 1, pMusi);
+        fclose(pMusi);
+        return;
+    }else{
+        cout<<"ESE INSTRUMENTO NO CONICIDE CON NINGUN INSTRUMENTO EXISTENTE"<<endl;
+        fclose(pMusi);
+        return;
+    }
 }
 
 //////////////////////////////////////////////////////////
@@ -99,7 +127,9 @@ Musicos ArchivoMusicos::leerMusico(int p){
 void ArchivoMusicos::buscarPorDNI(){
     Musicos obj;
     int DNI;
-    cout<<"INGRESE EL DNI A BUSCAR ";
+    cout<<"LISTAR MUSICOS POR DNI"<<endl;
+    cout<<"----------------------"<<endl;
+    cout<<"INGRESE EL DNI A BUSCAR: ";
     cin>>DNI;
     int pos=buscarMusico(DNI);
     obj=leerMusico(pos);
@@ -124,7 +154,8 @@ void ArchivoMusicos::mostrarRegistros(){
         cout<<"NO SE PUDO CREAR EL ARCHIVO"<<endl;
         return;
     }
-
+    cout<<"MUSICOS CARGADOS"<<endl;
+    cout<<"----------------"<<endl;
 	while(fread(&obj, sizeof obj, 1, pMusi)==1){
         obj.Mostrar();
         if(obj.getEstado()) cout<<endl;

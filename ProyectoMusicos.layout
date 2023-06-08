@@ -2,9 +2,33 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="Musicos.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2202" topLine="17" />
+		</Cursor>
+	</File>
+	<File name="ArchivoMusicos.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3551" topLine="122" />
+		</Cursor>
+		<Folding>
+			<Collapse line="148" />
+			<Collapse line="169" />
+			<Collapse line="178" />
+			<Collapse line="213" />
+		</Folding>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="345" topLine="5" />
+		</Cursor>
+		<Folding>
+			<Collapse line="19" />
+		</Folding>
+	</File>
 	<File name="SubMenus.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5070" topLine="29" />
+			<Cursor1 position="330" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="10" />
@@ -14,45 +38,70 @@
 			<Collapse line="238" />
 		</Folding>
 	</File>
-	<File name="ArchivoInstrumentos.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Instrumentos.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5091" topLine="98" />
+			<Cursor1 position="114" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Generos.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1646" topLine="51" />
+		</Cursor>
+	</File>
+	<File name="ArchivoGeneros.h" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4819" topLine="44" />
 		</Cursor>
 		<Folding>
-			<Collapse line="33" />
-			<Collapse line="48" />
-			<Collapse line="76" />
-			<Collapse line="92" />
-			<Collapse line="111" />
-			<Collapse line="129" />
+			<Collapse line="51" />
+			<Collapse line="94" />
+			<Collapse line="123" />
+			<Collapse line="140" />
 		</Folding>
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Paises.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="946" topLine="35" />
+			<Cursor1 position="1004" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="ArchivoPaises.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4007" topLine="117" />
 		</Cursor>
 		<Folding>
-			<Collapse line="19" />
+			<Collapse line="169" />
+			<Collapse line="178" />
+			<Collapse line="212" />
 		</Folding>
+	</File>
+	<File name="ArchivoInstrumentos.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4255" topLine="46" />
+		</Cursor>
+		<Folding>
+			<Collapse line="34" />
+			<Collapse line="46" />
+			<Collapse line="61" />
+			<Collapse line="89" />
+			<Collapse line="107" />
+			<Collapse line="169" />
+			<Collapse line="178" />
+			<Collapse line="214" />
+		</Folding>
+	</File>
+	<File name="Persona.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2005" topLine="63" />
+		</Cursor>
 	</File>
 	<File name="Fecha.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1889" topLine="61" />
 		</Cursor>
 	</File>
-	<File name="Persona.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Reportes.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="728" topLine="14" />
-		</Cursor>
-	</File>
-	<File name="Instrumentos.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="Reportes.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="253" topLine="0" />
+			<Cursor1 position="4257" topLine="2" />
 		</Cursor>
 		<Folding>
 			<Collapse line="18" />
@@ -63,44 +112,6 @@
 			<Collapse line="129" />
 			<Collapse line="135" />
 			<Collapse line="136" />
-		</Folding>
-	</File>
-	<File name="Musicos.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="282" topLine="23" />
-		</Cursor>
-		<Folding>
-			<Collapse line="45" />
-		</Folding>
-	</File>
-	<File name="Generos.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1491" topLine="55" />
-		</Cursor>
-	</File>
-	<File name="ArchivoPaises.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2521" topLine="71" />
-		</Cursor>
-	</File>
-	<File name="ArchivoGeneros.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1845" topLine="39" />
-		</Cursor>
-		<Folding>
-			<Collapse line="35" />
-			<Collapse line="89" />
-			<Collapse line="106" />
-			<Collapse line="125" />
-		</Folding>
-	</File>
-	<File name="ArchivoMusicos.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1251" topLine="111" />
-		</Cursor>
-		<Folding>
-			<Collapse line="77" />
-			<Collapse line="98" />
 		</Folding>
 	</File>
 </CodeBlocks_layout_file>

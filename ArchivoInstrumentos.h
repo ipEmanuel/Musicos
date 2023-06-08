@@ -12,7 +12,8 @@ class ArchivoInstrumentos{
 
         ///ALTA
         void agregarRegistro();
-
+        //RETORNA EL TOTAL DE LOS REGISTROS
+        int contarRegistro();
         ///ID
         int ultimoID();
         Instrumentos leerInstrumentos(int p);
@@ -28,6 +29,18 @@ class ArchivoInstrumentos{
         //BAJA
         bool bajaLogica();
 };
+//////////////////////////////////////////////////////////
+////////////RETORNA EL TOTAL DE LOS REGISTROS/////////////
+//////////////////////////////////////////////////////////
+int ArchivoInstrumentos::contarRegistro(){
+        FILE *p;
+        p=fopen(nombre, "rb");
+        if(p==NULL) return -1;
+        fseek(p, 0,2);
+        int tam=ftell(p);
+        fclose(p);
+        return tam/sizeof(Instrumentos);
+    }
 //////////////////////////////////////////////////////////
 ///////////////////CARGA EL ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
@@ -85,6 +98,8 @@ Instrumentos ArchivoInstrumentos::leerInstrumentos(int p){
     fseek(pIns, sizeof obj * p, 0); ///0: desde el principio, 1: desde la posicion actual, 2: desde el eof
     int aux=fread(&obj, sizeof obj, 1, pIns);
     fclose(pIns);
+    //SI LA AUX ES IGUAL A CERO NO PUDO LEER ELEMENTOS DEL ARCHIVO
+    // Y SETEA -1 AL ID
     if(aux==0){
         obj.setId(-1);
     }
@@ -112,6 +127,8 @@ int ArchivoInstrumentos::buscarID(int id){
 void ArchivoInstrumentos::buscarPorID(){
     Instrumentos obj;
     int ID;
+    cout<<"LISTAR INSTRUMENTO POR ID"<<endl;
+    cout<<"-------------------------"<<endl;
     cout<<"INGRESE EL ID A BUSCAR ";
     cin>>ID;
     int pos=buscarID(ID);
@@ -135,7 +152,8 @@ void ArchivoInstrumentos::mostrarRegistros(){
         cout<<"NO SE PUDO CREAR EL ARCHIVO"<<endl;
         return;
     }
-
+    cout<<"INSTRUMENTOS CARGADOS"<<endl;
+    cout<<"---------------------"<<endl;
 	while(fread(&obj, sizeof obj, 1, pIns)==1){
         if(obj.getEstado()){
             obj.mostrar();

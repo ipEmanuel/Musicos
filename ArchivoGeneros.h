@@ -31,6 +31,22 @@ class ArchivoGeneros{
 
 };
 //////////////////////////////////////////////////////////
+///////////FUNCION QUE BUSCA UN PAIS//////////////
+//////////////////////////////////////////////////////////
+bool buscarPais(int paisOrigen){
+    Paises reg;
+    ArchivoPaises archivoPaises("paises.dat");
+    int cantReg = archivoPaises.contarRegistro();
+
+    for (int i = 0; i < cantReg; i++) {
+        reg = archivoPaises.leerPaises(i);
+        if (reg.getId() == paisOrigen) {
+            return true;
+        }
+    }
+    return false;
+}
+//////////////////////////////////////////////////////////
 ///////////////////CARGA EL ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
 void ArchivoGeneros::agregarRegistro(){
@@ -41,18 +57,36 @@ void ArchivoGeneros::agregarRegistro(){
         cout<<"NO SE PUDO CREAR EL ARCHIVO"<<endl;
         return;
     }
+    cout<<"CARGA DE GENEROS"<<endl;
+    cout<<"----------------"<<endl;
     int anioOrigen;
     cout<<"INGRESAR ANIO DE ORIGEN: ";
     cin>>anioOrigen;
     if(anioOrigen<1500){
         cout<<"EL ANIO DEBE SER MAYOR A 1500"<<endl;
+        fclose(pGen);
         return;
     }
+    int paisOrigen;
+    cout<<"INGRESAR PAIS DE ORIGEN: ";
+    cin>>paisOrigen;
 
-    obj.Cargar(anioOrigen, ultimoID());
-
-	fwrite(&obj, sizeof (Generos), 1, pGen);
-	fclose(pGen);
+    if(paisOrigen>0 && paisOrigen<=100){
+        if(buscarPais(paisOrigen) == true){
+            obj.Cargar(anioOrigen, ultimoID(), paisOrigen);
+            fwrite(&obj, sizeof (Generos), 1, pGen);
+            fclose(pGen);
+            return;
+        }else{
+            cout<<"El PAIS NO CONICIDE CON NINGUN PAIS EXISTENTE"<<endl;
+            fclose(pGen);
+            return;
+        }
+    }else{
+        cout<<"EL PAIS DE ORIGEN DEBE SER UN VALOR ENTRE 0 Y 100"<<endl;
+        fclose(pGen);
+        return;
+    }
 }
 
 //////////////////////////////////////////////////////////
@@ -126,6 +160,8 @@ int ArchivoGeneros::buscarID(int id){
 void ArchivoGeneros::buscarPorID(){
     Generos obj;
     int ID;
+    cout<<"LISTAR GENERO POR ID"<<endl;
+    cout<<"--------------------"<<endl;
     cout<<"INGRESE EL ID A BUSCAR ";
     cin>>ID;
     int pos=buscarID(ID);
@@ -150,7 +186,8 @@ void ArchivoGeneros::mostrarRegistros(){
         cout<<"NO SE PUDO CREAR EL ARCHIVO"<<endl;
         return;
     }
-
+    cout<<"GENEROS CARGADOS"<<endl;
+    cout<<"----------------"<<endl;
 	while(fread(&obj, sizeof obj, 1, pGen)==1){
         if(obj.getEstado()){
             obj.Mostrar();

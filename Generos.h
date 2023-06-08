@@ -25,7 +25,7 @@ class Generos{
         void setAnioOrigen(int anioOrigen);
         void setEstado(bool e){_estado=e;}
 
-        void Cargar(int anio, int id);
+        void Cargar(int anioOrigen, int id, int paisOrigen);
         void Mostrar();
         bool anioValido(int anio);
 
@@ -54,8 +54,7 @@ void Generos::setAnioOrigen(int anioOrigen){
     }
 }
 
-void Generos:: Cargar(int anioOrigen, int id){
-    int paisOrigen;
+void Generos:: Cargar(int anioOrigen, int id, int paisOrigen){
 
     _id=id;
     _anioOrigen=anioOrigen;
@@ -63,11 +62,13 @@ void Generos:: Cargar(int anioOrigen, int id){
     cout<<"INGRESAR NOMBRE: ";
     cin>>_nombre;
 
-    cout<<"INGRESAR PAIS DE ORIGEN: ";
-    cin>>paisOrigen;
-    if(paisOrigen>0 && paisOrigen<=100){
-        _paisOrigen=paisOrigen;
+    // Convertir _nombre a mayúsculas
+    int length = std::strlen(_nombre);
+    for (int i = 0; i < length; i++) {
+        _nombre[i] = std::toupper(_nombre[i]);
     }
+
+    _paisOrigen=paisOrigen;
     _estado=true;
 }
 

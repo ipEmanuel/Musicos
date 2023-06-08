@@ -60,7 +60,7 @@ void Persona::Cargar(int dni=-1){
 void Persona::Mostrar(){
     cout<<"DNI: ";
     cout<<DNI<<endl;
-    cout<<"FECHA NACIMIENTO: "<<endl;
+    cout<<"FECHA NACIMIENTO: ";
     fechaNacimiento.Mostrar();
     cout<<"NOMBRE: ";
     cout<<nombre<<endl;

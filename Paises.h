@@ -20,12 +20,21 @@ public:
 
     void cargar(int id){
         _id=id;
-        cout<<"CARGA DE INSTRUMENTOS"<<endl;
+        cout<<"CARGA DE PAISES"<<endl;
         cout<<"---------------------"<<endl;
         cout<<"INGRESAR NOMBRE: ";
         cin>>_nombre;
+         // Convertir _nombre a mayúsculas
+        int length = std::strlen(_nombre);
+        for (int i = 0; i < length; i++) {
+            _nombre[i] = std::toupper(_nombre[i]);
+        }
         cout<<"INGRESAR CONTINENTE: ";
         cin>>_continente;
+        length = std::strlen(_continente);
+        for (int i = 0; i < length; i++) {
+            _continente[i] = std::toupper(_continente[i]);
+        }
         _estado=true;
     }
 
