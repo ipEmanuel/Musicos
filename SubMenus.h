@@ -1,5 +1,5 @@
-#ifndef FUNCIONESGLOBALES_H_INCLUDED
-#define FUNCIONESGLOBALES_H_INCLUDED
+#ifndef SUBMENUS_H_INCLUDED
+#define SUBMENUS_H_INCLUDED
 
 ////////////////////////////////////
 /////////SUBMENU MUSICOS////////////
@@ -273,4 +273,4 @@ void menuConfiguracion(){
     }
 }
 
-#endif // FUNCIONESGLOBALES_H_INCLUDED
+#endif // SUBMENUS_H_INCLUDED

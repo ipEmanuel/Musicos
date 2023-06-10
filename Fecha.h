@@ -97,7 +97,14 @@ bool check=false;
 }
 
 void Fecha::Mostrar(){
-    cout<<dia<<"/"<<mes<<"/"<<anio<<endl;
+//    cout <<dia<<"/"<<mes<<"/"anio << right << setw(10);
+
+    //std::cout << std::setfill('0');  // Rellena con ceros a la izquierda si es necesario
+    std::cout << std::setw(2) << dia << "/";
+    std::cout << std::setw(2) << mes << "/";
+    std::cout << std::setw(4) << anio;
+    std::cout << std::setw(4)<<"";
+
 }
 
 #endif // FECHA_H_INCLUDED

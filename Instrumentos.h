@@ -38,13 +38,12 @@ public:
 
     void mostrar(){
         if(_estado){
-            cout << "ID: " << _id<< endl;
-            cout << "NOMBRE: " << _nombre<< endl;
-            cout << "CLASIFICACION: " << _clasificacion<< endl;
-            cout << "-----------------------" << endl;
+            cout << left << setw(15) <<  _id;
+            cout << left << setw(15) <<  _nombre;
+            cout << left << setw(15) <<  _clasificacion;
+
         }
     }
-
 };
 
 #endif // INSTRUMENTOS_H_INCLUDED

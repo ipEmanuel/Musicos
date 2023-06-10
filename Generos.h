@@ -39,7 +39,6 @@ bool Generos::anioValido(int anio){
         return true;
     }
 }
-
 void Generos::setPaisOrigen(int paisOrigen){
     if(paisOrigen>0 && paisOrigen<=100){
          _paisOrigen=paisOrigen;}
@@ -53,7 +52,6 @@ void Generos::setAnioOrigen(int anioOrigen){
         cout<<"ANIO NO VALIDO";
     }
 }
-
 void Generos:: Cargar(int anioOrigen, int id, int paisOrigen){
 
     _id=id;
@@ -74,10 +72,12 @@ void Generos:: Cargar(int anioOrigen, int id, int paisOrigen){
 
 void Generos::Mostrar(){
     if(_estado){
-        cout<<"ID "<<_id<<endl;
-        cout<<"NOMBRE "<<_nombre<<endl;
-        cout<<"PAIS DE ORIGEN "<<_paisOrigen<<endl;
-        cout<<"ANIO DE ORIGEN "<<_anioOrigen<<endl;
+
+        cout << left << setw(15) <<  _id;
+        cout << left << setw(22) <<  _nombre;
+        cout << left << setw(13) <<  _paisOrigen;
+        cout << left << setw(15) <<  _anioOrigen;
+
     }
 }
 

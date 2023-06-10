@@ -29,22 +29,7 @@ class ArchivoMusicos{
 
 
 };
-//////////////////////////////////////////////////////////
-///////////FUNCION QUE BUSCA UN INSTRUMENTOS//////////////
-//////////////////////////////////////////////////////////
-bool buscarInstrumento(int instrumento){
-    Instrumentos reg;
-    ArchivoInstrumentos archivoInstrumentos("instrumentos.dat");
-    int cantReg = archivoInstrumentos.contarRegistro();
 
-    for (int i = 0; i < cantReg; i++) {
-        reg = archivoInstrumentos.leerInstrumentos(i);
-        if (reg.getId() == instrumento) {
-            return true;
-        }
-    }
-    return false;
-}
 //////////////////////////////////////////////////////////
 ///////////////////CARGA EL ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
@@ -79,7 +64,6 @@ void ArchivoMusicos::agregarRegistro(){
         return;
     }
 }
-
 //////////////////////////////////////////////////////////
 //////////////FUNCIONES PARA BUSCAR POR DNI///////////////
 //////////////////////////////////////////////////////////
@@ -102,7 +86,6 @@ int ArchivoMusicos::buscarMusico(int d){
 	fclose(pMusi);
 	return -1;
 }
-
 Musicos ArchivoMusicos::leerMusico(int p){
     Musicos obj;
     if(p<0){
@@ -123,7 +106,6 @@ Musicos ArchivoMusicos::leerMusico(int p){
     }
     return obj;
 }
-
 void ArchivoMusicos::buscarPorDNI(){
     Musicos obj;
     int DNI;
@@ -141,11 +123,9 @@ void ArchivoMusicos::buscarPorDNI(){
         cout<<"ERROR DE ARCHIVO"<<endl;
     }
 }
-
 //////////////////////////////////////////////////////////
 ///////////////////MOSTRAR ARCHIVO////////////////////////
 //////////////////////////////////////////////////////////
-
 void ArchivoMusicos::mostrarRegistros(){
     Musicos obj;
     FILE *pMusi;
@@ -154,19 +134,50 @@ void ArchivoMusicos::mostrarRegistros(){
         cout<<"NO SE PUDO CREAR EL ARCHIVO"<<endl;
         return;
     }
+    string separador = "---------------------------------------------------------------";
     cout<<"MUSICOS CARGADOS"<<endl;
-    cout<<"----------------"<<endl;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << endl;
+
+    string txtDni = "DNI";
+    string txtNombre = "NOMBRE";
+    string txtApellido = "APELLIDO";
+    string txtFechaNac = "F/NACIMIENTO";
+    string txtTelefono = "TELEFONO";
+    string txtEmail = "EMAIL";
+    string txtClaustro = "CLAUSTRO";
+    string txtInstrumento = "INSTRUMENTO";
+    string txtTipoMusica = "T/MUSICA";
+    string txtMatricula = "MATRICULA";
+    string txtFechaIns = "F/INSCRIPCION";
+
+    cout << left << setw(6) << txtDni ;
+    cout << left << setw(8) << txtNombre;
+    cout << left << setw(10) << txtApellido;
+    cout << left << setw(14) << txtFechaNac;
+    cout << left << setw(10) << txtTelefono ;
+    cout << left << setw(22) << txtEmail;
+    cout << left << setw(10) << txtClaustro;
+    cout << left << setw(13) << txtInstrumento;
+    cout << left << setw(10) << txtTipoMusica ;
+    cout << left << setw(10) << txtMatricula;
+    cout << left << setw(10) << txtFechaIns;
+    cout << endl;
+
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << endl;
+
 	while(fread(&obj, sizeof obj, 1, pMusi)==1){
         obj.Mostrar();
         if(obj.getEstado()) cout<<endl;
 	}
 	fclose(pMusi);
 }
-
 //////////////////////////////////////////////////////////
 //////////////////MODIFICAR ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
-
 bool ArchivoMusicos::modificarRegistro(Musicos obj, int pos){
     FILE *pMusi;
     pMusi = fopen(nombre, "rb+");
@@ -175,7 +186,6 @@ bool ArchivoMusicos::modificarRegistro(Musicos obj, int pos){
     fclose(pMusi);
     return aux;
 }
-
 bool ArchivoMusicos::modificarInscripcion(){
     ///SOLICITAR QUE REGISTRO SE QUIERE MODIFICAR EL MAIL
     Musicos obj;
@@ -206,11 +216,9 @@ bool ArchivoMusicos::modificarInscripcion(){
     bool aux = modificarRegistro(obj, pos);
     return aux;
 }
-
 //////////////////////////////////////////////////////////
-//////////////////MODIFICAR ARCHIVO///////////////////////
+//////////////////////BAJA LOGICA/////////////////////////
 //////////////////////////////////////////////////////////
-
 bool ArchivoMusicos::bajaLogica(){
     ///SOLICITAR QUE REGISTRO SE QUIERE DAR DE BAJA
     Musicos obj;

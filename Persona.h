@@ -58,7 +58,7 @@ void Persona::Cargar(int dni=-1){
 }
 
 void Persona::Mostrar(){
-    cout<<"DNI: ";
+   /* cout<<"DNI: ";
     cout<<DNI<<endl;
     cout<<"FECHA NACIMIENTO: ";
     fechaNacimiento.Mostrar();
@@ -69,8 +69,14 @@ void Persona::Mostrar(){
     cout<<"EMAIL: ";
     cout<<email<<endl;
     cout<<"TELEFONO: ";
-    cout<<telefono<<endl;
+    cout<<telefono<<endl;*/
 
+    cout << left << setw(6) <<  DNI;
+    cout << left << setw(8) <<  nombre;
+    cout << left << setw(10) <<  apellido;
+    fechaNacimiento.Mostrar();
+    cout << left << setw(10) <<  telefono;
+    cout << left << setw(22) <<  email;
 }
 
 void Persona::MostrarPA(){

@@ -40,10 +40,9 @@ class Musicos: public Persona{
                 cout<<"------------------------------"<<endl;
                 Persona::Cargar(dni);
         }
-
         void Mostrar(){
             if(estado){
-                //cout<<"------------------------------"<<endl;
+                /*/cout<<"------------------------------"<<endl;
                 cout<<"CLAUSTRO: "<<_claustro<<endl;
                 cout<<"INSTRUMENTO: "<<_instrumento<<endl;
                 cout<<"TIPO DE MUSICA: "<<_tipoDeMusica<<endl;
@@ -51,7 +50,14 @@ class Musicos: public Persona{
                 cout<<"FECHA DE INSCRIPCION: ";
                 _fechaInscripcion.Mostrar();
                 Persona::Mostrar();
-                cout<<"------------------------------";
+                cout<<"------------------------------";*/
+                Persona::Mostrar();
+                cout << left << setw(10) <<  _claustro;
+                cout << left << setw(13) <<  _instrumento;
+                cout << left << setw(10) <<  _tipoDeMusica;
+                cout << left << setw(10) <<  _matricula;
+                _fechaInscripcion.Mostrar();
+
             }
         }
 };

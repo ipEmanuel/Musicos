@@ -30,22 +30,7 @@ class ArchivoGeneros{
 
 
 };
-//////////////////////////////////////////////////////////
-///////////FUNCION QUE BUSCA UN PAIS//////////////
-//////////////////////////////////////////////////////////
-bool buscarPais(int paisOrigen){
-    Paises reg;
-    ArchivoPaises archivoPaises("paises.dat");
-    int cantReg = archivoPaises.contarRegistro();
 
-    for (int i = 0; i < cantReg; i++) {
-        reg = archivoPaises.leerPaises(i);
-        if (reg.getId() == paisOrigen) {
-            return true;
-        }
-    }
-    return false;
-}
 //////////////////////////////////////////////////////////
 ///////////////////CARGA EL ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
@@ -88,7 +73,6 @@ void ArchivoGeneros::agregarRegistro(){
         return;
     }
 }
-
 //////////////////////////////////////////////////////////
 ////////////////////////ULTIMO ID/////////////////////////
 //////////////////////////////////////////////////////////
@@ -117,7 +101,6 @@ int ArchivoGeneros::ultimoID(){
     // RETORNAR EL ÚLTIMO ID INCREMENTADO EN 1 PARA EL NUEVO REGISTRO
     return ultimoID + 1;
 }
-
 /////////////////////////////////////////////////////////
 //////////////FUNCIONES PARA BUSCAR POR ID////////////////
 //////////////////////////////////////////////////////////
@@ -177,7 +160,6 @@ void ArchivoGeneros::buscarPorID(){
 //////////////////////////////////////////////////////////
 ///////////////////MOSTRAR ARCHIVO////////////////////////
 //////////////////////////////////////////////////////////
-
 void ArchivoGeneros::mostrarRegistros(){
     Generos obj;
     FILE *pGen;
@@ -188,6 +170,34 @@ void ArchivoGeneros::mostrarRegistros(){
     }
     cout<<"GENEROS CARGADOS"<<endl;
     cout<<"----------------"<<endl;
+
+
+
+    string separador = "---------------";
+
+    cout<<"INSTRUMENTOS CARGADOS"<<endl;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << endl;
+
+    string txtId = "ID";
+    string txtNombre = "NOMBRE";
+    string txtPaisOrigen = "PAIS DE ORIGEN";
+    string txtAnioOrigen = "ANIO DE ORIGEN ";
+    cout << left << setw(15) << txtId ;
+    cout << left << setw(15) << txtNombre;
+    cout << left << setw(15) << txtPaisOrigen;
+    cout << left << setw(15) << txtAnioOrigen;
+    cout << endl;
+
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << endl;
+
 	while(fread(&obj, sizeof obj, 1, pGen)==1){
         if(obj.getEstado()){
             obj.Mostrar();
@@ -196,11 +206,9 @@ void ArchivoGeneros::mostrarRegistros(){
 	}
 	fclose(pGen);
 }
-
 /////////////////////////////////////////////////////////
 //////////////////MODIFICAR ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
-
 bool ArchivoGeneros::modificarRegistro(Generos obj, int pos){
     FILE *pGen;
     pGen = fopen(nombre, "rb+");
@@ -209,7 +217,6 @@ bool ArchivoGeneros::modificarRegistro(Generos obj, int pos){
     fclose(pGen);
     return aux;
 }
-
 bool ArchivoGeneros::modificarAnioOrigen(){
     ///SOLICITAR QUE REGISTRO SE QUIERE MODIFICAR EL MAIL
     Generos obj;
@@ -240,11 +247,9 @@ bool ArchivoGeneros::modificarAnioOrigen(){
     bool aux = modificarRegistro(obj, pos);
     return aux;
 }
-
 ///////////////////////////////////////////////////////////
 //////////////////////////BAJA/////////////////////////////
 ///////////////////////////////////////////////////////////
-
 bool ArchivoGeneros::bajaLogica(){
     ///SOLICITAR QUE REGISTRO SE QUIERE DAR DE BAJA
     Generos obj;

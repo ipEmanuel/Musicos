@@ -40,10 +40,9 @@ public:
 
     void mostrar(){
         if(_estado){
-            cout << "ID: " << _id<< endl;
-            cout << "NOMBRE: " << _nombre<< endl;
-            cout << "CONTINENTE: " << _continente<< endl;
-            cout << "-----------------------" << endl;
+            cout << left << setw(15) <<  _id;
+            cout << left << setw(15) <<  _nombre;
+            cout << left << setw(15) <<  _continente;
         }
     }
 

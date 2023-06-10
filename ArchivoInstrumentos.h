@@ -152,8 +152,28 @@ void ArchivoInstrumentos::mostrarRegistros(){
         cout<<"NO SE PUDO CREAR EL ARCHIVO"<<endl;
         return;
     }
+    string separador = "---------------";
+
     cout<<"INSTRUMENTOS CARGADOS"<<endl;
-    cout<<"---------------------"<<endl;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << endl;
+
+    string txtId = "ID";
+    string txtNombre = "NOMBRE";
+    string txtClasificacion = "CLASIFICACION";
+
+    cout << left << setw(15) << txtId ;
+    cout << left << setw(15) << txtNombre;
+    cout << left << setw(15) << txtClasificacion;
+    cout << endl;
+
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << endl;
+
 	while(fread(&obj, sizeof obj, 1, pIns)==1){
         if(obj.getEstado()){
             obj.mostrar();
@@ -162,11 +182,9 @@ void ArchivoInstrumentos::mostrarRegistros(){
 	}
 	fclose(pIns);
 }
-
 //////////////////////////////////////////////////////////
 //////////////////MODIFICAR ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
-
 bool ArchivoInstrumentos::modificarRegistro(Instrumentos obj, int pos){
     FILE *pIns;
     pIns = fopen(nombre, "rb+");
@@ -175,7 +193,6 @@ bool ArchivoInstrumentos::modificarRegistro(Instrumentos obj, int pos){
     fclose(pIns);
     return aux;
 }
-
 bool ArchivoInstrumentos::modificarNombre(){
     ///SOLICITAR QUE REGISTRO SE QUIERE MODIFICAR
     Instrumentos obj;
@@ -207,11 +224,9 @@ bool ArchivoInstrumentos::modificarNombre(){
     bool aux = modificarRegistro(obj, pos);
     return aux;
 }
-
 ///////////////////////////////////////////////////////////
 //////////////////////////BAJA/////////////////////////////
 ///////////////////////////////////////////////////////////
-
 bool ArchivoInstrumentos::bajaLogica(){
     ///SOLICITAR QUE REGISTRO SE QUIERE DAR DE BAJA
     Instrumentos obj;

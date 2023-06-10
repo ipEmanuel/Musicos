@@ -39,6 +39,7 @@
 		<Unit filename="ArchivoMusicos.h" />
 		<Unit filename="ArchivoPaises.h" />
 		<Unit filename="Fecha.h" />
+		<Unit filename="FuncionesGlobales.h" />
 		<Unit filename="Generos.h" />
 		<Unit filename="Instrumentos.h" />
 		<Unit filename="Musicos.h" />

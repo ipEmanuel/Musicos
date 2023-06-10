@@ -41,8 +41,6 @@ int ArchivoPaises::contarRegistro(){
         fclose(p);
         return tam/sizeof(Paises);
 }
-
-
 //////////////////////////////////////////////////////////
 ///////////////////CARGA EL ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
@@ -152,8 +150,26 @@ void ArchivoPaises::mostrarRegistros(){
         cout<<"NO SE PUDO CREAR EL ARCHIVO"<<endl;
         return;
     }
+    string separador = "---------------";
     cout<<"PAISES CARGADOS"<<endl;
-    cout<<"----------------"<<endl;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << endl;
+
+    string txtId = "ID";
+    string txtNombre = "NOMBRE";
+    string txtContinente = "CONTINENTE";
+
+    cout << left << setw(15) << txtId ;
+    cout << left << setw(15) << txtNombre;
+    cout << left << setw(15) << txtContinente;
+    cout << endl;
+
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << left << setw(15) << separador;
+    cout << endl;
 	while(fread(&obj, sizeof obj, 1, pPais)==1){
         if(obj.getEstado()){
             obj.mostrar();
@@ -162,11 +178,9 @@ void ArchivoPaises::mostrarRegistros(){
 	}
 	fclose(pPais);
 }
-
 //////////////////////////////////////////////////////////
 //////////////////MODIFICAR ARCHIVO///////////////////////
 //////////////////////////////////////////////////////////
-
 bool ArchivoPaises::modificarRegistro(Paises obj, int pos){
     FILE *pPais;
     pPais = fopen(nombre, "rb+");
@@ -175,7 +189,6 @@ bool ArchivoPaises::modificarRegistro(Paises obj, int pos){
     fclose(pPais);
     return aux;
 }
-
 bool ArchivoPaises::modificarNombre(){
     ///SOLICITAR QUE REGISTRO SE QUIERE MODIFICAR
     Paises obj;
